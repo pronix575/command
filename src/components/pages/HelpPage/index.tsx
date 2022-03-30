@@ -59,7 +59,7 @@ const Card: FC<{ title: string; description: string }> = ({
 }) => {
   return (
     <CardWrap>
-      <div style={{ fontWeight: 900 }}>{title}</div>
+      <div style={{ fontWeight: 900, fontSize: 18 }}>{title}</div>
       <Space />
       <div>{description}</div>
     </CardWrap>
