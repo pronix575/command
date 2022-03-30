@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { HelpPage } from "./components/pages/HelpPage";
 import { PreviewPage } from "./components/pages/PreviewPage";
+import { WorkWithUsPage } from "./components/pages/WorkWithUsPage";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <PreviewPage />
       <HelpPage />
+      <WorkWithUsPage />
     </div>
   );
 }
