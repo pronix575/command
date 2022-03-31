@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.div`
   background: var(--main-color);
-  padding: 14px 25px;
+  padding: 14px 30px;
   color: white;
   border-radius: 8px;
   width: min-content;
@@ -16,5 +16,11 @@ export const Button = styled.div`
   &:hover {
     opacity: 0.9;
     box-shadow: 0 8px 16px #0048ff86;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 1;
+    transform: translateY(2px);
   }
 `;
