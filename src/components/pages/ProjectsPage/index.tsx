@@ -8,6 +8,8 @@ import nftboxesImage from "./assets/Exilon.png";
 import nykelsintethImage from "./assets/Nickel.jpg";
 import quantummemoryImage from "./assets/Memory.png";
 import { Space } from "../../Layout/Space/Space";
+import { Button } from "../../Button";
+import { Grid } from "../../Layout/Grid";
 
 interface Project {
   name: string;
@@ -54,8 +56,29 @@ const data: Project[] = [
 export const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(0);
 
+  const selectedProjectItem = data.find(
+    (_, index) => index === selectedProject
+  );
+
   return (
     <Layout fullpage title="Проекты">
+      {selectedProjectItem && (
+        <ProjectCard temp="1.4fr 1fr" gap="50px">
+          <div>
+            <ProjectTitle>{selectedProjectItem.name}</ProjectTitle>
+            <Space h={40} />
+            <div>{selectedProjectItem.description}</div>
+            {selectedProjectItem.link && (
+              <a href={selectedProjectItem.link} target="_blank">
+                <Space h={35} />
+                <Button>Перейти</Button>
+              </a>
+            )}
+          </div>
+          <ProjectImage src={selectedProjectItem.image} />
+        </ProjectCard>
+      )}
+      <Space h={45} />
       <Flex h="space-between">
         {data.map((elem, index) => (
           <MiniCard
@@ -68,6 +91,21 @@ export const ProjectsPage = () => {
     </Layout>
   );
 };
+
+const ProjectTitle = styled.div`
+  font-size: 40px;
+  font-weight: 900;
+`;
+
+const ProjectImage = styled.div<{ src: string }>`
+  width: 100%;
+  height: 300px;
+  background-size: 100%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(${({ src }) => src});
+`;
 
 const MiniCard: FC<{
   project: Project;
@@ -107,6 +145,11 @@ const ProjectMiniCard = styled(Flex)<{ selected: boolean }>`
   justify-content: space-between;
   flex-direction: column;
   margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   transition: 0.2s;
 
   border: ${({ selected }) =>
@@ -116,4 +159,10 @@ const ProjectMiniCard = styled(Flex)<{ selected: boolean }>`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
+`;
+
+const ProjectCard = styled(Grid)`
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
 `;
