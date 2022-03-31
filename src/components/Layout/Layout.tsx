@@ -12,7 +12,11 @@ export const Layout: FC<Props> = ({ children, fullpage, style, title }) => {
   return (
     <Flex
       h="center"
-      style={{ height: fullpage ? "100vh" : void 0, ...(style || {}) }}
+      style={{
+        height: fullpage ? "100vh" : void 0,
+        maxHeight: 1080,
+        ...(style || {}),
+      }}
     >
       <Wrap>
         {title && <Title>{title}</Title>}
