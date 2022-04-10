@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const Button = styled.div`
-  background: var(--main-color);
+  border: 3px solid var(--main-color);
   padding: 14px 30px;
-  color: white;
-  border-radius: 8px;
+  color: black;
+  border-radius: 80px;
+  font-size: 18px;
+  font-weight: bold;
   width: min-content;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
 
   box-shadow: 0 8px 16px #0048ff52;
-  transition: 0.2s;
+  transition: all 0.2s;
 
   &:hover {
     opacity: 0.9;

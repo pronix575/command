@@ -8,7 +8,7 @@ interface Props {
   line?: boolean;
 }
 
-export const Space = styled.div`
+export const Space = styled.div<Props>`
   min-width: ${({ w }: Props) => `${w || 15}px`};
   min-height: ${({ h, line }: Props) => `${(h || 15) * (line ? 2 : 1)}px`};
 `;

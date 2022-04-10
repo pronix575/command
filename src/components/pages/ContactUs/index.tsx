@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Checkbox, FormControlLabel, TextField } from "@mui/material";
 import { Button } from "../../Button";
 import { Flex } from "../../Layout/Flex";
 import { Grid } from "../../Layout/Grid";
@@ -42,6 +42,12 @@ export const ContactUsPage = () => {
         variant="outlined"
         rows={5}
       />
+      <Space h={30} />
+      <FormControlLabel
+        label="Я согласен с политикой конфиденциальности и использования запрашиваемых данных"
+        control={<Checkbox />}
+      />
+
       <Space h={30} />
       <Button>Отправить</Button>
     </Layout>
