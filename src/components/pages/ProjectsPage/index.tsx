@@ -33,7 +33,7 @@ const data: Project[] = [
   },
   {
     name: "NFTboxes",
-    link: "https://exilon.io/",
+    link: "https://box-front.vercel.app/market",
     description:
       "NFTboxes marketplace - это уникальный сервис, где можно создавать, крафтить, хранить, покупать и продавать NFT, лутбоксы и супербоксы из различных проектов. Он разработан для игр и частных лиц, для собственных маркетинговых целей проекта в рамках партнерских отношений, альянсов или рекламных акций. ",
     image: nftboxesImage,

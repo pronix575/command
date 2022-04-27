@@ -12,7 +12,7 @@ export const ContactUsPage = () => {
       style={{ background: "white", padding: "50px 0" }}
     >
       <div>
-        Или звоните по телефону <b>+7 999-123-12-23</b>
+        Или звоните по телефону <b>+7 987 420 60-60</b>
       </div>
       <Space h={30} />
       <Grid temp="1fr 1fr" gap="30px">

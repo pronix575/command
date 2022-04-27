@@ -3,7 +3,6 @@ import { Contacts } from "../Contacts";
 import { Flex } from "../Layout/Flex";
 import { Layout } from "../Layout/Layout";
 import { Logo } from "../Logo";
-import { MenuPanel } from "../MenuPanel";
 
 export const Header = () => {
   return (

@@ -9,7 +9,7 @@ export const Contacts = () => {
     <Flex h="flex-end">
       <PhoneIcon />
       <Space />
-      <MenuItem> +7 999-123-12-23</MenuItem>
+      <MenuItem> +7 987 420 60-60</MenuItem>
       <Space />
       <TelegramIcon />
     </Flex>
