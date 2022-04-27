@@ -52,18 +52,27 @@ const data = [
 export const HelpPage = () => {
   return (
     <Layout
-      fullpage
-      style={{ background: "#ECECEC" }}
+      style={{
+        background: "#ECECEC",
+        height: "auto",
+        maxHeight: "auto",
+        padding: "30px 0",
+      }}
       title="Чем мы можем помочь Вам?"
     >
-      <Grid temp="1fr 1fr 1fr" gap="25px">
+      <Cards>
         {data.map((elem) => (
           <Card {...elem} />
         ))}
-      </Grid>
+      </Cards>
     </Layout>
   );
 };
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 const Card: FC<{ title: string; description: string; image: string }> = ({
   title,
@@ -80,7 +89,11 @@ const Card: FC<{ title: string; description: string; image: string }> = ({
 };
 
 const CardWrap = styled.div<{ image: string }>`
-  height: 220px;
+  width: 100%;
+  max-width: 320px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
   border-radius: 20px;
   background: white;
 
@@ -101,7 +114,7 @@ const CardWrap = styled.div<{ image: string }>`
     background-image: ${({ image }) => image};
 
     .description {
-      display: none;
+      opacity: 0;
     }
   }
 `;
